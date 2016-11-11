@@ -1,0 +1,57 @@
+@import "../../../less/main";
+.poss-box{
+  .log-box{
+    width:1000px;
+    margin:0 auto;
+    height:100px;
+    .logoImg{
+      font-family: "PingFangSC";
+
+      img{
+        width: 148px;
+        height: auto;
+        margin-top: 34px;
+        vertical-align: bottom;
+      }
+    }
+    .sj-box{
+      font-size:18px;
+      color:#333;
+      padding-left:18px;
+      margin-left: 18px;
+      height: 44px;
+      border-left: 1px solid #ccc;
+      line-height: 35px;
+    }
+    .phone{
+      float:right;
+      font-size:12px;
+      margin-top:40px;
+      line-height:21px;
+      color:#333;
+    }
+  }
+  .con-box{
+    width:1000px;
+    margin:0 auto;
+    .menu-box{
+      margin:20px 0 40px;
+      .ant-steps .ant-steps-title{
+        font-weight: normal;
+      }
+      .ant-steps .ant-steps-item.ant-steps-status-process .ant-steps-head-inner{
+        border-color: @red;
+        background-color: @red;
+      }
+      .ant-steps .ant-steps-item.ant-steps-status-finish .ant-steps-head-inner>.ant-steps-icon{
+        color: @btnHover;
+      }
+      .ant-steps .ant-steps-item.ant-steps-status-finish .ant-steps-head-inner{
+        border-color:@btnHover;
+      }
+      .ant-steps .ant-steps-item.ant-steps-status-finish .ant-steps-tail>i:after{
+        background: @btnHover;
+      }
+    }
+  }
+}
