@@ -21,7 +21,7 @@
 * React-Redux
 * Redux
 * React-Router
-* antd-mobile
+* antd
 * babel-preset-stage-0
 * less
 * reqwest ajax模块
