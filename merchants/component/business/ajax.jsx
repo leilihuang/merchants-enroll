@@ -5,6 +5,7 @@ import { showLoad , hideLoad } from '../public/loading/action';
 class Util{
     ajax(params,dispatch,callback){
         dispatch(showLoad());
+        const host = 'http://192.168.4.110:8082';
         /**
          * @url 请求地址(必填)
          * @type  json数据类型
@@ -14,13 +15,14 @@ class Util{
             url:params.url,
             type:params.type || 'json',
             method:params.method || 'GET',
-            data:params.data || {}
+            contentType:'application/json',
+            data:JSON.stringify(params.data) || {}
         })
             .then((resp) => {
-                callback( Object.assign({},resp,{success:true}));
+                callback( Object.assign({},resp));
             })
             .fail((err) =>{
-                callback(Object.assign({},err,{success:false}));
+                callback(Object.assign({},err));
 
             })
         .always(resp => {

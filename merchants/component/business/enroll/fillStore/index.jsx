@@ -57,7 +57,7 @@ export default class FillStore extends Component{
         console.log(form.getFieldsValue());
         if(isForm){
             this.props.setForm(Object.assign(form.getFieldsValue(),{showModel:true}));
-            this.props.getVerfiy({url:'/api/seller/apply/checkVerifyCode',mobileNo:form.getFieldValue('personPhone'),verifyCode:form.getFieldValue('verifyCode')});
+            this.props.getVerfiy({url:'/api/seller/apply/checkVerifyCode',method:'POST',data:{mobileNo:form.getFieldValue('personPhone'),verifyCode:form.getFieldValue('verifyCode')}});
         }
     }
     onPhoneRq(rule, value, callback){
@@ -73,7 +73,7 @@ export default class FillStore extends Component{
         const form = this.props.form;
         if(form.getFieldValue('personPhone')){
             if(form.getFieldValue('personPhone').length == 11){
-                this.props.getCode({url:'/api/seller/apply/sendVerifyCode',mobileNo:form.getFieldValue('personPhone')});
+                this.props.getCode({url:'/api/seller/apply/sendVerifyCode',method:'POST',data:{mobileNo:form.getFieldValue('personPhone')}});
             }
         }
     }

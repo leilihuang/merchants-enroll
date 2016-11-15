@@ -24,6 +24,18 @@ export const setFormAjax = (params) =>(dispatch)=>{
         }
     });
 };
+export const isNames = params => (dispatch) =>{
+    Util.ajax(params.param,dispatch,(data)=>{
+        if(data.success){
+            dispatch(setFormAjax(params.next));
+        }else{
+            Modal.error({
+                title: '提示信息',
+                content: data.errorMessage
+            });
+        }
+    });
+};
 
 const getShop = (shop) =>({
     type:GET_SHOP,
@@ -44,3 +56,4 @@ export const getMenuAjax = (params) =>(dispatch)=>{
         dispatch(getMenu(data));
     });
 };
+
