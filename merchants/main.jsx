@@ -4,8 +4,7 @@ import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { Router , Route , browserHistory } from 'react-router';
+import { Router  , browserHistory } from 'react-router';
 
 import routers from './config/router';
 import configureStore from './config/store';

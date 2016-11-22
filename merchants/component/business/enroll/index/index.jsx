@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Steps } from 'antd';
 import { getCurrent } from './action';
 
-import logoImg from '../../../../images/entroll/logo.png';
+import logoImg from '../../../../images/entroll/logo.jpg';
 import Loading from '../../../public/loading/index';
 
 const Step = Steps.Step;

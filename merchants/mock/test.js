@@ -78,8 +78,17 @@ Mock.mock(/\/api\/seller\/apply\/mainCategoryList/g,{
     }
 );
 
+//商户申请提交
+Mock.mock(/\/api\/seller\/apply\/submit/g,{
+        "success": true,
+        "errorCode": null,
+        "errorMessage": null,
+        "info": true
+    }
+);
+
 ///api/seller/apply/storeTypes [店铺类型
-Mock.mock(/\/api\/seller\/apply\/storeTypes/g,{
+Mock.mock('/api/seller/apply/storeTypes',{
         "success": true,
         "errorCode": null,
         "errorMessage": null,
@@ -88,14 +97,5 @@ Mock.mock(/\/api\/seller\/apply\/storeTypes/g,{
             "FRANCHISE_STORE": "专营店",
             "FLAGSHIP_STORE": "旗舰店"
         }
-    }
-);
-
-//商户申请提交
-Mock.mock(/\/api\/seller\/apply\/submit/g,{
-        "success": true,
-        "errorCode": null,
-        "errorMessage": null,
-        "info": true
     }
 );
