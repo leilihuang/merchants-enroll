@@ -1,5 +1,4 @@
 import reqwest from 'reqwest';
-import { connect } from 'react-redux';
 import { showLoad , hideLoad } from '../public/loading/action';
 
 class Util{
